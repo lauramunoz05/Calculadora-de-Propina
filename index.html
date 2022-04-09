@@ -16,49 +16,49 @@
                     <label>Total de la cuenta</label>
                     <div class="entradas">
                         <label>$ </label>
-                        <input type="text" id="totalCuenta" placeholder="0">
+                        <input type="number" id="totalCuenta" placeholder="0" >
                     </div>
     
                     <label>Porcentaje de la propina</label>
                     <div class="entradas">
-                        <input type="text" id="totalPropina" placeholder="0">
+                        <input type="number" id="totalPropina" placeholder="0" >
                         <label>% </label>
                     </div>
                 </div>
     
-                <button id="calcular">Calcular</button>
+                <button type="submit" id="calcular">Calcular</button>
                 <input type="reset" value="Borrar" id="borrar">
             
-                    <fieldset>
-                        <h2>Resumen</h2>
-                        <div class="resultados">
-            
-                            <div class="resultado">
-                                <label>Total de la cuenta </label>
-                                <div>
-                                    <label>$ </label>
-                                    <input type="text" id="resultCuenta" placeholder="0" disabled>
-                                </div>
+                <fieldset>
+                    <h2>Resumen</h2>
+                    <div class="resultados">
+        
+                        <div class="resultado">
+                            <label>Total de la cuenta </label>
+                            <div>
+                                <label>$ </label>
+                                <input type="text" id="resultCuenta" placeholder="0" disabled>
                             </div>
-            
-                            <div class="resultado">
-                                <label>Propina </label>
-                                <div>
-                                    <label>$ </label>
-                                    <input type="text" id="resultPropina" placeholder="0"  disabled>
-                                </div>
-                            </div>
-            
-                            <div class="resultado">
-                                <label>Total a pagar </label>
-                                <div>
-                                    <label>$ </label>
-                                    <input type="text" id="resultTotalCuenta" placeholder="0"  disabled>
-                                </div>
-                            </div>
-            
                         </div>
-                    </fieldset>
+        
+                        <div class="resultado">
+                            <label>Propina </label>
+                            <div>
+                                <label>$ </label>
+                                <input type="text" id="resultPropina" placeholder="0"  disabled>
+                            </div>
+                        </div>
+        
+                        <div class="resultado">
+                            <label>Total a pagar </label>
+                            <div>
+                                <label>$ </label>
+                                <input type="text" id="resultTotalCuenta" placeholder="0"  disabled>
+                            </div>
+                        </div>
+        
+                    </div>
+                </fieldset>
             </form>
         </div>
     </div>

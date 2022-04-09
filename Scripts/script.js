@@ -1,16 +1,20 @@
-let btnCalcular = document.getElementById('calcular')
+// let btnCalcular = document.getElementById('calcular');
+let form = document.querySelector('form');
 
-btnCalcular.addEventListener('click', e => {
-    e.preventDefault()
-    let totalCuenta = Number(document.getElementById('totalCuenta').value);
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    let totalCuenta = document.getElementById('totalCuenta').value;
     let totalPropina = Number(document.getElementById('totalPropina').value);
-    let resultCuenta = document.getElementById('resultCuenta').value = totalCuenta;
+    let resultCuenta = document.getElementById('resultCuenta');
     let resultPropina = document.getElementById('resultPropina');
     let resultTotalCuenta = document.getElementById('resultTotalCuenta');
 
-    let porcentajePropina = (totalCuenta * totalPropina) / 100;
-    let totalPagar = resultCuenta + porcentajePropina;
+    const totalCuentaSinPuntos = totalCuenta.replace(/\./g, "");
 
+    let porcentajePropina = (totalCuentaSinPuntos * totalPropina) / 100;
+    let totalPagar = Number(totalCuentaSinPuntos) + porcentajePropina;
+
+    resultCuenta.value = totalCuentaSinPuntos;
     resultPropina.value = porcentajePropina;
     resultTotalCuenta.value = totalPagar;
 })
